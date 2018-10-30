@@ -32,6 +32,7 @@ pipeline {
         sh "git stash"
         echo "Checking Out Development"
         sh 'git checkout development'
+        sh 'ssh-add ~/.ssh/id_rsa'
         sh 'git pull origin'
         echo 'Checking Out Master'
         sh 'git checkout master'
